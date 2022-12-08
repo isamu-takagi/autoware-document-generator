@@ -18,5 +18,4 @@ class AdapiResources(InterfaceResources):
                 with path.open() as fp:
                     line = fp.readline()
                 if self.generated_keyword in line:
-                    print(path)
                     path.unlink()
