@@ -20,6 +20,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from .interface import AutowareInterface
 from .structure import AutowareStructure
+from .resources import AdapiResources
 
 def generate():
     parser = argparse.ArgumentParser()
@@ -27,27 +28,16 @@ def generate():
     args = parser.parse_args()
 
     source_path = Path(get_package_share_directory("autoware_interface_document"))
-    output_path = Path(args.path)
-    api_path = output_path / "list"
-    msg_path = output_path / "types"
     templates = Environment(loader=FileSystemLoader(source_path / "templates"), trim_blocks=True)
 
-    # clean_target(api_path)
-    # clean_target(msg_path)
+    document = AdapiResources(args.path)
+    document.clean()
 
     msgs = list_msgs()
-    for msg in msgs.values(): msg.generate(msg_path, templates)
-    # AutowareStructure.GenerateIndex(msg_path, msgs.values())
+    for msg in msgs.values(): msg.generate(document.type_path, templates)
 
     apis = list_apis(source_path / "resource", msgs)
-    for api in apis.values(): api.generate(api_path, templates)
-    # AutowareInterface.GenerateIndex(api_path, apis.values())
-
-
-def clean_target(target_path):
-    for path in target_path.iterdir():
-        if path.is_dir():
-            shutil.rmtree(path)
+    for api in apis.values(): api.generate(document.list_path, templates)
 
 
 def list_msgs():
