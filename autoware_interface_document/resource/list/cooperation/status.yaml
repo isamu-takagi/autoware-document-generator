@@ -1,0 +1,21 @@
+interface:
+  name: /api/cooperation/status
+  type: autoware_adapi_v1_msgs/msg/CooperationStatusArray
+  method: realtime stream
+
+description: |-
+  Get the cooperation status.
+
+message:
+  - name: statuses.stamp
+    text: T.B.D.
+  - name: statuses.target
+    text: T.B.D.
+  - name: statuses.autonomous
+    text: T.B.D.
+  - name: statuses.cooperator
+    text: T.B.D.
+  - name: statuses.direction
+    text: T.B.D.
+  - name: statuses.distance
+    text: T.B.D.

@@ -1,0 +1,17 @@
+interface:
+  name: /api/cooperation/set_defaults
+  type: autoware_adapi_v1_msgs/srv/SetCooperationDecisions
+  method: function call
+
+description: |-
+  T.B.D.
+
+request:
+  - name: requests
+    text: T.B.D.
+
+response:
+  - name: status
+    text: response status
+  - name: responses
+    text: T.B.D.
