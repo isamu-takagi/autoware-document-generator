@@ -1,0 +1,15 @@
+interface:
+  name: /api/vehicle/position
+  type: autoware_adapi_v1_msgs/msg/VehiclePosition
+  method: realtime stream
+
+description: |-
+  Publish vehicle current pose and geo position.
+
+message:
+  - name: header
+    text: header for pose transformation
+  - name: pose
+    text: The pose from the base link
+  - name: geo_position
+    text: The longitude,, latitude and altitude of the vehicle

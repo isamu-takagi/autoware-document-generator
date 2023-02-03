@@ -1,0 +1,17 @@
+interface:
+  name: /api/vehicle/motion
+  type: autoware_adapi_v1_msgs/msg/VehicleMotion
+  method: realtime stream
+
+description: |-
+  Publish vehicle current motion information.
+
+message:
+  - name: header
+    text: header for pose transformation
+  - name: twist
+    text: Vehicle current twist with covariance , input from /localization/kinematic_state
+  - name: accel
+    text: Vehicle current acceleration with ovariance , input from /localization/acceleration
+  - name: steering_tire_angle
+    text: Vehicle current tire angle in [rad], input from /vehicle/status/steering_status

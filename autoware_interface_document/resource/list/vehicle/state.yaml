@@ -1,0 +1,15 @@
+interface:
+  name: /api/vehicle/state
+  type: autoware_adapi_v1_msgs/msg/VehicleState
+  method: notification
+
+description: |-
+  Publish vehicle state information
+
+message:
+  - name: gear
+    text: gear current status
+  - name: turn_indicator
+    text: turn indicator status, only either left or right will be enabled
+  - name: hazard_light
+    text: hazard light status

@@ -1,0 +1,11 @@
+interface:
+  name: /api/vehicle/door
+  type: autoware_adapi_v1_msgs/msg/VehicleDoorStatus
+  method: notification
+
+description: |-
+  Publish door status, the door location information will be received from vehicle info service.
+
+message:
+  - name: doors.status
+    text: current door status
