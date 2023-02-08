@@ -1,0 +1,17 @@
+interface:
+  name: /api/perception/object_recognition/objects
+  type: autoware_adapi_v1_msgs/msg/DynamicObjectArray
+  method: realtime stream
+
+description: |-
+  Get the recognized objects array with label, shape, current position and predicted path
+
+message:
+  - name: objects.id
+    text: The UUID of each object
+  - name: objects.semantic
+    text: The type of the object recognized and the confidence level
+  - name: objects.state
+    text: consist of the object pose, twist, acceleration and the predicted_paths
+  - name: objects.shape
+    text: describe the shapre of the object with dimension, and polygon 
