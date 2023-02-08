@@ -10,10 +10,10 @@ message:
   - name: objects.id
     text: The UUID of each object
   - name: objects.existence_probability
-    text: the probility of the object exits
+    text: the probability of the object exits
   - name: objects.classification
     text: The type of the object recognized and the confidence level
   - name: objects.kinematics
     text: Consist of the object pose, twist, acceleration and the predicted_paths
   - name: objects.shape
-    text: describe the shapre of the object with dimension, and polygon 
+    text: describe the shape of the object with dimension, and polygon
