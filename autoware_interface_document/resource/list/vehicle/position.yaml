@@ -12,4 +12,4 @@ message:
   - name: pose
     text: The pose from the base link
   - name: geo_position
-    text: The longitude,, latitude and altitude of the vehicle
+    text: The longitude, latitude and altitude of the vehicle
