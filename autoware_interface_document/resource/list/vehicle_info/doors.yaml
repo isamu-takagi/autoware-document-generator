@@ -1,0 +1,15 @@
+interface:
+  name: /api/vehicle/info/doors
+  type: autoware_adapi_v1_msgs/srv/GetDoorLayout
+  method: function call
+
+description: |-
+  Get the door layout. It is an array of pose for each door. The array index corresponds to the door status.
+
+request: []
+
+response:
+  - name: status
+    text: response status
+  - name: doors
+    text: The pose in the base_link frame. The outside front is positive X-coordinate.

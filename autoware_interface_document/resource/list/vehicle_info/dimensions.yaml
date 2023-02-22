@@ -1,0 +1,15 @@
+interface:
+  name: /api/vehicle/info/dimensions
+  type: autoware_adapi_v1_msgs/srv/GetVehicleDimensions
+  method: function call
+
+description: |-
+  Get the vehicle dimensions. See [here](../../../../../components/vehicle-dimensions.md) for the definition of each value.
+
+request: []
+
+response:
+  - name: status
+    text: response status
+  - name: dimensions
+    text: vehicle dimensions
