@@ -1,6 +1,6 @@
 interface:
   name: /api/perception/object_recognition/objects
-  type: autoware_adapi_v1_msgs/msg/PredictedObjects
+  type: autoware_adapi_v1_msgs/msg/PredictedObjectArray
   method: realtime stream
 
 description: |-
