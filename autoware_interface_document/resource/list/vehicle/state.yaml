@@ -7,6 +7,8 @@ description: |-
   Publish vehicle state information
 
 message:
+  - name: steering_tire_angle
+    text: Vehicle current tire angle in [rad], input from /vehicle/status/steering_status
   - name: gear
     text: gear current status
   - name: turn_indicator

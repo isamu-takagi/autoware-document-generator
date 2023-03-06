@@ -1,0 +1,17 @@
+interface:
+  name: /api/vehicle/kinematic
+  type: autoware_adapi_v1_msgs/msg/Kinematic
+  method: realtime stream
+
+description: |-
+  Publish vehicle kinematic
+
+message:
+  - name: geo_position
+    text: The longitude and latitude of the vehicle, if the map do not contains MGRS code, it will not be available.
+  - name: pose
+    text: The pose with covariance from the base link
+  - name: twist
+    text: Vehicle current twist with covariance , input from /localization/kinematic_state
+  - name: accel
+    text: Vehicle current acceleration with covariance , input from /localization/acceleration

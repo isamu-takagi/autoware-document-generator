@@ -1,10 +1,10 @@
 interface:
   name: /api/vehicle/door
-  type: autoware_adapi_v1_msgs/msg/VehicleDoorStatus
+  type: autoware_adapi_v1_msgs/msg/DoorStatusArray
   method: notification
 
 description: |-
-  Publish door status, the door location information will be received from vehicle info service.
+  Publish door status in array according to the door location information that received from vehicle info service.
 
 message:
   - name: doors.status
