@@ -1,6 +1,6 @@
 interface:
   name: /api/perception/object_recognition/objects
-  type: autoware_adapi_v1_msgs/msg/PredictedObjectArray
+  type: autoware_adapi_v1_msgs/msg/DynamicObjectArray
   method: realtime stream
 
 description: |-
