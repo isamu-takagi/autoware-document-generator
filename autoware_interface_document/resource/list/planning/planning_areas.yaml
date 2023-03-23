@@ -1,14 +1,14 @@
 interface:
-  name: /api/planning/detect_areas
-  type: autoware_adapi_v1_msgs/msg/DetectAreaArray
+  name: /api/planning/planning_areas
+  type: autoware_adapi_v1_msgs/msg/PlanningAreaArray
   method: realtime stream
 
 description: |-
-  Get the detection area, and the shape
+  Get the planning area, and the shape
   For details, see the [planning](./index.md).
 
 message:
   - name: areas.type
-    text: The type of detected area by planning
+    text: The type of area looking by planning
   - name: areas.shape
     text: The shape of the area
